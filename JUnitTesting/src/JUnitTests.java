@@ -3,19 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class JUnitTests {
-	
-	class Dollar{
-		private double amount;
-		
-		public Dollar( double amount ){
-			this.amount = amount;
-		}
-		
-		public Dollar times( double multiplier ){
-			return new Dollar( this.amount * multiplier );
-		}
-	}
+public class JUnitTests {s
 
 	/*
 	 * Chapter 1 and Chapter 2 combine test
