@@ -35,6 +35,11 @@ public class JUnitTests {
 		assertEquals("USD", Money.dollar(1).currency());
 		assertEquals("PKR", Money.rupee(1).currency());
 	}
+	
+	@Test
+	public void testDifferentClassEquality() {
+		assertTrue(new Money(10, "PKR").equals(new Rupee(10, "PKR")));
+	}
 
 
 }
