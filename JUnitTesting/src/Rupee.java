@@ -5,7 +5,7 @@ public class Rupee extends Money {
 		this.amount = amount;
 	}
 
-	public Rupee times( double multiplier ){
+	public Money times( double multiplier ){
 		return new Rupee(this.amount * multiplier);
 	}
 	

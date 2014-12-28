@@ -7,27 +7,27 @@ public class JUnitTests {
 
 	@Test
 	public void testMultiplication() {
-		Dollar six = new Dollar(6);
-		assertEquals(new Dollar(18), six.times(3));
-		assertEquals(new Dollar(24), six.times(4));
+		Dollar six = Money.dollar(6);
+		assertEquals(Money.dollar(18), six.times(3));
+		assertEquals(Money.dollar(24), six.times(4));
 	}
 	
 	@Test
 	public void testEquality(){
-		assertTrue(new Dollar(10).equals(new Dollar(10)));
-		assertFalse(new Dollar(10).equals(new Dollar(6)));
-		assertTrue(new Rupee(5).equals(new Rupee(5)));
-		assertFalse(new Rupee(5).equals(new Rupee(6)));
-		assertFalse(new Rupee(5).equals(new Dollar(5)));
+		assertTrue(Money.dollar(10).equals(Money.dollar(10)));
+		assertFalse(Money.dollar(10).equals(Money.dollar(6)));
+		assertTrue(Money.rupee(5).equals(Money.rupee(5)));
+		assertFalse(Money.rupee(5).equals(Money.rupee(6)));
+		assertFalse(Money.rupee(5).equals(Money.dollar(5)));
 
 
 	}
 	
 	@Test
 	public void testRupeeMultiplication(){
-		Rupee six = new Rupee(6);
-		assertEquals(new Rupee(18), six.times(3));
-		assertEquals(new Rupee(24), six.times(4));
+		Rupee six = Money.rupee(6);
+		assertEquals(Money.rupee(18), six.times(3));
+		assertEquals(Money.rupee(24), six.times(4));
 	}
 
 }

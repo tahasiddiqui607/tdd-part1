@@ -2,7 +2,13 @@
 public class Money {
 	protected double amount;
 	
+	public static Dollar dollar( double amount ){
+		return new Dollar(amount);
+	}
 	
+	public static Rupee rupee(double amount ){
+		return new Rupee(amount);
+	}
 	public boolean equals(Object object){
 		boolean toReturn = false;
 		if( object != null && object instanceof Money ){
