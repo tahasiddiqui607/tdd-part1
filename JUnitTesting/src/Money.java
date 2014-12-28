@@ -7,7 +7,7 @@ public class Money {
 		boolean toReturn = false;
 		if( object != null && object instanceof Money ){
 			Money money = (Money)object;
-			toReturn = (money.amount == this.amount);
+			toReturn = (money.amount == this.amount && getClass().equals(money.getClass()));
 		}
 		
 		return toReturn;

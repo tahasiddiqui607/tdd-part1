@@ -18,6 +18,8 @@ public class JUnitTests {
 		assertFalse(new Dollar(10).equals(new Dollar(6)));
 		assertTrue(new Rupee(5).equals(new Rupee(5)));
 		assertFalse(new Rupee(5).equals(new Rupee(6)));
+		assertFalse(new Rupee(5).equals(new Dollar(5)));
+
 
 	}
 	
