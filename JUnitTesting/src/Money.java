@@ -1,7 +1,9 @@
 
-public class Money {
+public abstract class Money {
 	protected double amount;
 	
+	abstract Money times(double multiplier);
+
 	public static Dollar dollar( double amount ){
 		return new Dollar(amount);
 	}
