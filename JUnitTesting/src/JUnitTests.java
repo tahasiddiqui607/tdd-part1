@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class JUnitTests {s
+public class JUnitTests {
 
 	/*
 	 * Chapter 1 and Chapter 2 combine test
