@@ -17,5 +17,11 @@ public class JUnitTests {
 		product = six.times(4);
 		assertEquals(24, product.amount, 0);
 	}
+	
+	@Test
+	public void testEquality(){
+		assertTrue(new Dollar(10).equals(new Dollar(10)));
+		assertFalse(new Dollar(10).equals(new Dollar(6)));
+	}
 
 }
