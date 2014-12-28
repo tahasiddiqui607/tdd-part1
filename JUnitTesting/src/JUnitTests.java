@@ -5,9 +5,6 @@ import org.junit.Test;
 
 public class JUnitTests {
 
-	/*
-	 * Chapter 1 and Chapter 2 combine test
-	 * **/
 	@Test
 	public void testMultiplication() {
 		Dollar six = new Dollar(6);
@@ -19,6 +16,9 @@ public class JUnitTests {
 	public void testEquality(){
 		assertTrue(new Dollar(10).equals(new Dollar(10)));
 		assertFalse(new Dollar(10).equals(new Dollar(6)));
+		assertTrue(new Rupee(5).equals(new Rupee(5)));
+		assertFalse(new Rupee(5).equals(new Rupee(6)));
+
 	}
 	
 	@Test

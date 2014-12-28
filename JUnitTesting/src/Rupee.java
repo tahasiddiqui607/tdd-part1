@@ -1,6 +1,5 @@
 
-public class Rupee {
-	private double amount;
+public class Rupee extends Money {
 	
 	public Rupee(double amount) {
 		this.amount = amount;
@@ -10,14 +9,4 @@ public class Rupee {
 		return new Rupee(this.amount * multiplier);
 	}
 	
-	
-	public boolean equals(Object object){
-		boolean toReturn = false;
-		if( object != null && object instanceof Rupee ){
-			Rupee rupee = (Rupee)object;
-			toReturn = (rupee.amount == this.amount);
-		}
-		
-		return toReturn;
-	}
 }
