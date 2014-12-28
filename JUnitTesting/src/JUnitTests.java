@@ -20,5 +20,12 @@ public class JUnitTests {
 		assertTrue(new Dollar(10).equals(new Dollar(10)));
 		assertFalse(new Dollar(10).equals(new Dollar(6)));
 	}
+	
+	@Test
+	public void testRupeeMultiplication(){
+		Rupee six = new Rupee(6);
+		assertEquals(new Rupee(18), six.times(3));
+		assertEquals(new Rupee(24), six.times(4));
+	}
 
 }
