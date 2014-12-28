@@ -29,5 +29,12 @@ public class JUnitTests {
 		assertEquals(Money.rupee(18), six.times(3));
 		assertEquals(Money.rupee(24), six.times(4));
 	}
+	
+	@Test
+	public void testCurrency() {
+		assertEquals("USD", Money.dollar(1).currency());
+		assertEquals("PKR", Money.rupee(1).currency());
+	}
+
 
 }
