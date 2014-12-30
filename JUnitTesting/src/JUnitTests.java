@@ -27,4 +27,13 @@ public class JUnitTests {
 		assertEquals("USD", Money.dollar(1).currency());
 		assertEquals("PKR", Money.rupee(1).currency());
 	}
+	
+	@Test
+	public void testSimpleAddition() {
+		Money six = Money.dollar(6);
+		Expression sum = six.plus(six);
+		Bank bank = new Bank();
+		Money reduced = bank.reduce(sum, "USD");
+		assertEquals(Money.dollar(10), reduced);
+	}
 }
