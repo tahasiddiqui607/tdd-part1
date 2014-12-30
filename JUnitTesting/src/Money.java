@@ -17,12 +17,12 @@ public  class Money {
 		return currency;
 	}
 
-	public static Dollar dollar( double amount ){
-		return new Dollar(amount, "USD");
+	public static Money dollar( double amount ){
+		return new Money(amount, "USD");
 	}
 	
-	public static Rupee rupee(double amount ){
-		return new Rupee(amount, "PKR");
+	public static Money rupee(double amount ){
+		return new Money(amount, "PKR");
 	}
 	public boolean equals(Object object){
 		boolean toReturn = false;
