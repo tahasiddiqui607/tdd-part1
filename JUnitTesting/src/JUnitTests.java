@@ -57,4 +57,12 @@ public class JUnitTests {
 		Money reduced = bank.reduce(Money.dollar(2), "USD");
 		assertEquals(Money.dollar(2), reduced);
 	}
+	
+	@Test
+	public void testReduceMoneyDifferentCurrencies() {
+		Bank bank = new Bank();
+		bank.addRate("PKR","USD", 50);
+		Money reduced = bank.reduce(Money.rupee(100), "USD");
+		assertEquals(Money.dollar(2), reduced);
+	}
 }

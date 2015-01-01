@@ -1,4 +1,4 @@
 
 public interface Expression {
-	Money reduce(String converTo);
+	Money reduce(Bank bank, String converTo);
 }
