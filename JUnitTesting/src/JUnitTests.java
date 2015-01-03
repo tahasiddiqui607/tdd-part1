@@ -75,4 +75,30 @@ public class JUnitTests {
 		Money reduced = bank.reduce(twoDollar.plus(fiftyRupee), "USD");
 		assertEquals(Money.dollar(3), reduced);
 	}
+	
+	@Test
+	public void testSumPlusMoney() {
+		Expression fiveDollar= Money.dollar(5);
+		Expression hundredRupee= Money.rupee(100);
+		Bank bank= new Bank();
+		bank.addRate("PKR", "USD", 50);
+		Expression sum= new Sum(fiveDollar, hundredRupee).plus(fiveDollar);
+		Money result= bank.reduce(sum, "USD");
+		assertEquals(Money.dollar(12), result);
+	}
+	@Test
+	public void testSumTimes() {
+		Expression fiveDollar= Money.dollar(5);
+		Expression hundredRupee= Money.rupee(100);
+		Bank bank= new Bank();
+		bank.addRate("PKR", "USD", 50);
+		Expression sum= new Sum(fiveDollar, hundredRupee).times(2);
+		Money result= bank.reduce(sum, "USD");
+		assertEquals(Money.dollar(14), result);
+	}
+	/*@Test
+	public void testPlusSameCurrencyReturnsMoney() {
+		Expression sum= Money.dollar(1).plus(Money.dollar(1));
+		assertTrue(sum instanceof Money);
+	}*/
 }
