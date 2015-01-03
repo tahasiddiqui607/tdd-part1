@@ -4,7 +4,7 @@ public  class Money implements Expression {
 	protected String currency;
 	
 	
-	public Money times( double multiplier ){
+	public Expression times( double multiplier ){
 		return new Money( this.amount * multiplier, currency );
 	}
 	
@@ -38,7 +38,7 @@ public  class Money implements Expression {
 		return amount + " " + currency;
 	}
 
-	public Expression plus(Money addend) {
+	public Expression plus(Expression addend) {
 		return new Sum(this, addend);
 	}
 	
